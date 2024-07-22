@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      {/* Header Section */}
+      {/* Header */}
       <div className="relative bg-cover bg-center h-screen">
         <video
           src={videoBbq}
@@ -71,7 +71,7 @@ function App() {
 
       {/* Container */}
       <div className="h-screen bg-gradient-custom flex flex-col">
-        {/* Invitation Section */}
+        {/* Section invitación */}
         <div className="flex-grow flex items-center justify-center">
   <div className="py-8 px-4 text-custom-white bg-customBlue rounded-lg max-w-3xl mx-auto">
     <h3 className="text-3xl text-center font-semibold mb-4 text-custom-white">Can Miranda te invita</h3>
@@ -84,7 +84,7 @@ function App() {
 </div>
 
 
-        {/* Countdown Timer Section */}
+        {/* Sección contador */}
         <div className="flex justify-center space-x-4 md:space-x-8 py-20 bg-gray-200">
           <div className="text-center">
             <div className="text-4xl font-bold">{timeLeft.days || 0}</div>
@@ -112,7 +112,7 @@ function App() {
       <div className="py-8 px-4 bg-white text-gray-800">
         <h2 className="text-2xl font-semibold mb-4">Juntos es mucho mejor, ¡reunámonos!</h2>
         <div className="flex justify-center">
-          {/* Aquí puedes agregar más contenido relacionado con el menú si es necesario */}
+        
         </div>
       </div>
     </div>
