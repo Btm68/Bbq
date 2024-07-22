@@ -50,6 +50,7 @@ Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto:
 
 Nombre: Brian
 Email: btmiranda68@gmail.com
+
 GitHub: Btm68
 
 ¡Gracias por tu interés en el proyecto!
