@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import videoBbq from './assets/videobbq1.mp4';
 import comida from './assets/bbq4.jpg';
+import pinxo from './assets/pinxos.jpg';
 import DropdownMenu from './components/DropdownMenu';
 
 function App() {
@@ -123,31 +124,54 @@ function App() {
         </div>
       </div>
 
-      {/* Menu Section */}
-      <div className="py-8 px-4 bg-black text-custom-white h-screen">
-        <h2 className="text-4xl font-semibold mb-4 text-center p-6">Juntos es mucho mejor, ¡reunámonos!</h2>
-        <div className="flex flex-col md:flex-row items-start justify-center p-5 mt-10 space-x-10 md:space-x-20 max-w-6xl mx-auto">
-          <img
-            src={comida}
-            alt="comida"
-            className="w-60 h-60 md:w-70 md:h-70 lg:w-86 lg:h-96 rounded-sm mb-4 md:mb-0"
-          />
-          <div className="text-lg md:flex-grow max-w-3xl md:max-w-2xl lg:max-w-3xl flex flex-col items-start">
-            <p className="text-2xl mb-4">
-              ¡Prepárate para un festín de sabores y colores! En nuestro evento, encontrarás una amplia variedad de delicias culinarias y refrescantes bebidas que satisfarán todos los gustos y antojos.
-              Desde exquisitas entradas hasta postres irresistibles, acompañados de una selección de bebidas.
-            </p>
-            <button
-              className="self-center px-6 py-3 bg-[#BC8315] rounded hover:bg-[#FFCF99] transition duration-300 text-custom-text"
-              onClick={toggleMenu}
-            >
-              Ver menú
-            </button>
-            {/* Menú desplegable */}
-            <DropdownMenu isMenuOpen={isMenuOpen} />
-          </div>
-        </div>
+{/* Menu Section */}
+<div className="py-8 px-4 bg-black text-custom-white">
+  <h2 className="text-4xl font-semibold mb-4 text-center p-6">Juntos es mucho mejor, ¡reunámonos!</h2>
+  <div className="flex flex-col md:flex-row items-start justify-center p-5 mt-10 space-x-10 md:space-x-20 max-w-6xl mx-auto">
+    <img
+      src={comida}
+      alt="comida"
+      className="w-60 h-60 md:w-70 md:h-70 lg:w-86 lg:h-96 rounded-sm mb-4 md:mb-0"
+    />
+    <div className="text-lg md:flex-grow max-w-3xl md:max-w-2xl lg:max-w-3xl flex flex-col items-start">
+      <p className="text-2xl mb-4">
+        ¡Prepárate para un festín de sabores y colores! En nuestro evento, encontrarás una amplia variedad de delicias culinarias y refrescantes bebidas que satisfarán todos los gustos y antojos.
+        Desde exquisitas entradas hasta postres irresistibles, acompañados de una selección de bebidas.
+      </p>
+      <button
+        className="self-center px-6 py-3 bg-[#BC8315] rounded hover:bg-[#FFCF99] transition duration-300 text-custom-text"
+        onClick={toggleMenu}
+      >
+        Ver menú
+      </button>
+      {/* Menú desplegable */}
+      <DropdownMenu isMenuOpen={isMenuOpen} />
+    </div>
+  </div>
+
+  {/* Sección derecha */}
+  <div className="flex flex-col md:flex-row items-start md:items-center mt-4 md:mt-2 relative z-10">
+    <div className="text-lg md:flex-grow max-w-3xl md:max-w-2xl lg:max-w-3xl flex flex-col items-start">
+      <p className="text-2xl mb-4">
+        Y eso no es todo. En nuestra barbacoa no solo disfrutarás de una deliciosa selección de comidas, desde jugosas costillas, pinchos y sabrosas hamburguesas a la parrilla, hasta frescas ensaladas y exquisitos acompañamientos. También compartirás momentos inolvidables con la mejor compañía.
+        La magia de una buena comida se eleva cuando se comparte con amigos. Además, tendremos una excelente variedad de bebidas: cervezas, vinos, refrescos, mojitos y más, para brindar por los buenos momentos.
+        ¡Ven a disfrutar de esta barbacoa y experiencia social única, donde cada bocado y cada risa harán de esta celebración algo inolvidable!
+      </p>
+    </div>
+    <img
+      src={pinxo}
+      alt="otra imagen"
+      className="w-60 h-60 md:w-70 md:h-70 lg:w-86 lg:h-96 rounded-sm mb-4 md:mb-0"
+    />
+  </div>
+</div>
+
+      {/* Footer */}
+      <div className="bg-white h-40 flex items-center justify-center">
+        <p className="text-xl">HOLA MUNDO</p>
       </div>
+
+      
     </div>
   );
 }
