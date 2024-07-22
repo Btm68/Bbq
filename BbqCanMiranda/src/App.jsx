@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import videoBbq from './assets/videobbq1.mp4';
-import burger1 from './assets/burguer'; 
+import comida from './assets/bbq4.jpg';
+import DropdownMenu from './components/DropdownMenu';
 
 function App() {
   const calculateTimeLeft = () => {
@@ -32,6 +33,15 @@ function App() {
 
     return () => clearInterval(timer);
   }, []);
+
+
+  // Estado para controlar la visibilidad del menú desplegable
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Función para alternar la visibilidad del menú
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -114,18 +124,30 @@ function App() {
       </div>
 
       {/* Menu Section */}
-      {/* Menu Section */}
-      <div className="py-8 px-4 bg-black text-custom-white">
+      <div className="py-8 px-4 bg-black text-custom-white h-screen">
         <h2 className="text-4xl font-semibold mb-4 text-center p-6">Juntos es mucho mejor, ¡reunámonos!</h2>
-        <div className="flex flex-col md:flex-row items-center">
-          <img src={burger1} alt="Burger" className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-lg mb-4 md:mb-0 md:mr-4" />
-          <p className="text-lg md:flex-grow">
-            ¡Prepárate para un festín de sabores y colores! En nuestro evento, encontrarás una amplia variedad de delicias culinarias y refrescantes bebidas que satisfarán todos los gustos y antojos.
-            Desde exquisitas entradas hasta postres irresistibles, acompañados de una selección de bebidas.
-          </p>
+        <div className="flex flex-col md:flex-row items-start justify-center p-5 mt-10 space-x-10 md:space-x-20 max-w-6xl mx-auto">
+          <img
+            src={comida}
+            alt="comida"
+            className="w-60 h-60 md:w-70 md:h-70 lg:w-86 lg:h-96 rounded-sm mb-4 md:mb-0"
+          />
+          <div className="text-lg md:flex-grow max-w-3xl md:max-w-2xl lg:max-w-3xl flex flex-col items-start">
+            <p className="text-2xl mb-4">
+              ¡Prepárate para un festín de sabores y colores! En nuestro evento, encontrarás una amplia variedad de delicias culinarias y refrescantes bebidas que satisfarán todos los gustos y antojos.
+              Desde exquisitas entradas hasta postres irresistibles, acompañados de una selección de bebidas.
+            </p>
+            <button
+              className="self-center px-6 py-3 bg-[#BC8315] rounded hover:bg-[#FFCF99] transition duration-300 text-custom-text"
+              onClick={toggleMenu}
+            >
+              Ver menú
+            </button>
+            {/* Menú desplegable */}
+            <DropdownMenu isMenuOpen={isMenuOpen} />
+          </div>
         </div>
       </div>
-
     </div>
   );
 }
