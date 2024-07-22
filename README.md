@@ -23,27 +23,26 @@ La página incluye un temporizador de cuenta regresiva para el evento y seccione
 Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
 1. **Clona el repositorio**:
-
    terminal:
    git clone https://github.com/Btm68/Bbq.git
-2. Navega al directorio del proyecto:
-
+   
+3. Navega al directorio del proyecto:
   terminal:
   cd Bbq
   
-3. Instala las dependencias:
-
+4. Instala las dependencias:
   terminal:
   npm install
 
-4. Inicia el servidor de desarrollo:
-
+5. Inicia el servidor de desarrollo:
    terminal:
    npm run dev
    
 ## Estructura del Proyecto
 src/App.js: Componente principal de la aplicación que incluye la lógica del temporizador y el diseño.
+
 src/assets/videobbq1.mp4: Video de fondo utilizado en la página.
+
 src/App.css: Estilos CSS personalizados para el proyecto.
 
 ## Contacto
