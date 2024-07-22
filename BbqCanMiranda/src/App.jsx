@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import videoBbq from './assets/videobbq1.mp4';
-import bbq1time from './assets/bbq1time.png'; 
-
+import burger1 from './assets/burguer'; 
 
 function App() {
   const calculateTimeLeft = () => {
@@ -85,47 +84,48 @@ function App() {
           </div>
         </div>
 
-{/* Sección contador */}
-<div className="flex justify-center space-x-4 md:space-x-8 py-20 bg-custom-image">
-  <div className="text-center">
-    <div className="bg-gray-300 p-6 rounded-lg">
-      <div className="text-6xl font-bold">{timeLeft.days || 0}</div>
-    </div>
-    <div className="mt-3 text-2xl font-semibold text-custom-white">Días</div>
-  </div>
-  <div className="text-center">
-    <div className="bg-gray-300 p-6 rounded-lg">
-      <div className="text-6xl font-bold">{timeLeft.hours || 0}</div>
-    </div>
-    <div className="mt-3 text-2xl font-semibold text-custom-white">Horas</div>
-  </div>
-  <div className="text-center">
-    <div className="bg-gray-300 p-6 rounded-lg">
-      <div className="text-6xl font-bold">{timeLeft.minutes || 0}</div>
-    </div>
-    <div className="mt-3 text-2xl font-semibold text-custom-white">Minutos</div>
-  </div>
-  <div className="text-center">
-    <div className="bg-gray-300 p-6 rounded-lg">
-      <div className="text-6xl font-bold">{timeLeft.seconds || 0}</div>
-    </div>
-    <div className="mt-3 text-2xl font-semibold text-custom-white">Segundos</div>
-  </div>
-</div>
-
-
-      </div>
-
-
-
-
-      {/* Menu Section */}
-      <div className="py-8 px-4 bg-white text-gray-800">
-        <h2 className="text-2xl font-semibold mb-4">Juntos es mucho mejor, ¡reunámonos!</h2>
-        <div className="flex justify-center">
-
+        {/* Sección contador */}
+        <div className="flex justify-center space-x-4 md:space-x-8 py-20 bg-custom-image">
+          <div className="text-center">
+            <div className="bg-gray-300 p-6 rounded-lg">
+              <div className="text-6xl font-bold">{timeLeft.days || 0}</div>
+            </div>
+            <div className="mt-3 text-2xl font-semibold text-custom-white">Días</div>
+          </div>
+          <div className="text-center">
+            <div className="bg-gray-300 p-6 rounded-lg">
+              <div className="text-6xl font-bold">{timeLeft.hours || 0}</div>
+            </div>
+            <div className="mt-3 text-2xl font-semibold text-custom-white">Horas</div>
+          </div>
+          <div className="text-center">
+            <div className="bg-gray-300 p-6 rounded-lg">
+              <div className="text-6xl font-bold">{timeLeft.minutes || 0}</div>
+            </div>
+            <div className="mt-3 text-2xl font-semibold text-custom-white">Minutos</div>
+          </div>
+          <div className="text-center">
+            <div className="bg-gray-300 p-6 rounded-lg">
+              <div className="text-6xl font-bold">{timeLeft.seconds || 0}</div>
+            </div>
+            <div className="mt-3 text-2xl font-semibold text-custom-white">Segundos</div>
+          </div>
         </div>
       </div>
+
+      {/* Menu Section */}
+      {/* Menu Section */}
+      <div className="py-8 px-4 bg-black text-custom-white">
+        <h2 className="text-4xl font-semibold mb-4 text-center p-6">Juntos es mucho mejor, ¡reunámonos!</h2>
+        <div className="flex flex-col md:flex-row items-center">
+          <img src={burger1} alt="Burger" className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-lg mb-4 md:mb-0 md:mr-4" />
+          <p className="text-lg md:flex-grow">
+            ¡Prepárate para un festín de sabores y colores! En nuestro evento, encontrarás una amplia variedad de delicias culinarias y refrescantes bebidas que satisfarán todos los gustos y antojos.
+            Desde exquisitas entradas hasta postres irresistibles, acompañados de una selección de bebidas.
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 }
