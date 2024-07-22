@@ -48,8 +48,8 @@ src/App.css: Estilos CSS personalizados para el proyecto.
 ## Contacto
 Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto:
 
-Nombre: Brian
-Email: btmiranda68@gmail.com
+Brian
+btmiranda68@gmail.com
 
 GitHub: Btm68
 
