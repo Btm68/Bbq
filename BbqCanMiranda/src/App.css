@@ -2,3 +2,9 @@
   background: linear-gradient(to top, #121311, #111311);
 }
 
+.bg-custom-image {
+  background-image: url('./assets/bbq1time.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

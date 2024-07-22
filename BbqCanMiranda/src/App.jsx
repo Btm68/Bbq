@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import videoBbq from './assets/videobbq1.mp4';
+import bbq1time from './assets/bbq1time.png'; 
+
 
 function App() {
   const calculateTimeLeft = () => {
@@ -73,36 +75,45 @@ function App() {
       <div className="h-screen bg-gradient-custom flex flex-col">
         {/* Section invitación */}
         <div className="flex-grow flex items-center justify-center">
-  <div className="py-8 px-4 text-custom-white bg-customBlue rounded-lg max-w-3xl mx-auto">
-    <h3 className="text-3xl text-center font-semibold mb-4 text-custom-white">Can Miranda te invita</h3>
-    <p className="text-custom-white text-lg">
-      Están todos invitados a la gran barbacoa de verano a Can Miranda. Hace tiempo les dije que teníamos que hacer una barbacoa en mi casa
-      para reunirnos y no perder ese contacto tan especial que tenemos. Pues, ¡ha llegado el momento! Será una comida fantástica donde nos lo pasaremos genial juntos, disfrutando de una barbacoa deliciosa,
-      risas y buenos momentos. Vengan preparados para comer, reír y crear recuerdos inolvidables. ¡Nos vemos en la parrilla!
-    </p>
+          <div className="py-8 px-4 text-custom-white bg-customBlue rounded-lg max-w-3xl mx-auto">
+            <h3 className="text-4xl text-center font-semibold mb-4 text-custom-white">Can Miranda te invita</h3>
+            <p className="text-custom-white text-2xl">
+              Están todos invitados a la gran barbacoa de verano a Can Miranda. Hace tiempo les dije que teníamos que hacer una barbacoa en mi casa
+              para reunirnos y no perder ese contacto tan especial que tenemos. Pues, ¡ha llegado el momento! Será una comida fantástica donde nos lo pasaremos genial juntos, disfrutando de una barbacoa deliciosa,
+              risas y buenos momentos. Vengan preparados para comer, reír y crear recuerdos inolvidables. ¡Nos vemos en la parrilla!
+            </p>
+          </div>
+        </div>
+
+{/* Sección contador */}
+<div className="flex justify-center space-x-4 md:space-x-8 py-20 bg-custom-image">
+  <div className="text-center">
+    <div className="bg-gray-300 p-6 rounded-lg">
+      <div className="text-6xl font-bold">{timeLeft.days || 0}</div>
+    </div>
+    <div className="mt-3 text-2xl font-semibold text-custom-white">Días</div>
+  </div>
+  <div className="text-center">
+    <div className="bg-gray-300 p-6 rounded-lg">
+      <div className="text-6xl font-bold">{timeLeft.hours || 0}</div>
+    </div>
+    <div className="mt-3 text-2xl font-semibold text-custom-white">Horas</div>
+  </div>
+  <div className="text-center">
+    <div className="bg-gray-300 p-6 rounded-lg">
+      <div className="text-6xl font-bold">{timeLeft.minutes || 0}</div>
+    </div>
+    <div className="mt-3 text-2xl font-semibold text-custom-white">Minutos</div>
+  </div>
+  <div className="text-center">
+    <div className="bg-gray-300 p-6 rounded-lg">
+      <div className="text-6xl font-bold">{timeLeft.seconds || 0}</div>
+    </div>
+    <div className="mt-3 text-2xl font-semibold text-custom-white">Segundos</div>
   </div>
 </div>
 
 
-        {/* Sección contador */}
-        <div className="flex justify-center space-x-4 md:space-x-8 py-20 bg-gray-200">
-          <div className="text-center">
-            <div className="text-4xl font-bold">{timeLeft.days || 0}</div>
-            <div>Días</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold">{timeLeft.hours || 0}</div>
-            <div>Horas</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold">{timeLeft.minutes || 0}</div>
-            <div>Minutos</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold">{timeLeft.seconds || 0}</div>
-            <div>Segundos</div>
-          </div>
-        </div>
       </div>
 
 
@@ -112,7 +123,7 @@ function App() {
       <div className="py-8 px-4 bg-white text-gray-800">
         <h2 className="text-2xl font-semibold mb-4">Juntos es mucho mejor, ¡reunámonos!</h2>
         <div className="flex justify-center">
-        
+
         </div>
       </div>
     </div>
